@@ -1,6 +1,6 @@
 package application;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  * 
@@ -9,14 +9,9 @@ import java.sql.Date;
  */
 public class Note {
 	/**
-	 * Variable to save the note id.
-	 */
-	private int idNote;
-	
-	/**
 	 * Variable to save the note date.
 	 */
-	private Date noteDate;
+	private LocalDate noteDate;
 	
 	/**
 	 * Variable to save the note title.
@@ -37,6 +32,7 @@ public class Note {
 		super();
 		this.title = title;
 		this.body = body;
+		noteDate=LocalDate.now();
 	}
 	
 	/**
@@ -77,9 +73,4 @@ public class Note {
 	public void delete() {
 		
 	}
-	
-	
-	
-	
-	
 }
